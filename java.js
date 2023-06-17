@@ -61,41 +61,6 @@ if (er_direccion.test(t))
    direccion.focus();
    return 0; 
 }
- var edadV = edad.value;
- edadV = validarEntero(edadV);
-
- if (edadV=="")
- {
- resultados.innerHTML="Tiene que introducir un número entero en su edad." ;
- edad.focus();
- return 0;
- }else{
- if (edadV<18)
- {
- resultados.innerHTML="Lo sentimos pero te falta edad para realizar una compra";
- edad.focus()
- return 0;
- }
- }
-function validarEntero(valor)
- {
- /* Mediante parseInt intentaremos
-transformar el valor a número entero.
- Si el dato fue ingresado bien y ya lo
-era, no hará nada */
- valor = parseInt(valor)
- /* Se comprobará si el valor es un número
-*/
- if (isNaN(valor)) {
- /* Si no lo es, se devuelve una cadena
-vacía */
- return "";
- }else{
- /* De lo contrario se devuelve el
-número */
- return valor;
- }
- }
  //Direccion__________________________________________________
  //Direccion__________________________________________________
  if (interes.selectedIndex==0){
